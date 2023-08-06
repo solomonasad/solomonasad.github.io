@@ -1,0 +1,653 @@
+/* styles.css */
+
+/* Global Styles */
+*{
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+  /* color: #000000; */
+  font-family: "Georgia", Times, sans-serif;
+  
+}
+
+html {
+  background-image: url("IMG_5300.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+  /* background-position: center;*/
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+   
+  overflow-x: hidden;
+}
+.parallax-section {
+  height: 100%;
+  overflow-y: scroll; /* Add this to allow scrolling within the parallax section */
+  background-image: url("IMG_5300.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Header Styles */
+header {
+  background-color: transparent;
+  font-weight: bold;
+  font-size: large;
+  
+}
+
+.header-title {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: absolute;
+  width: 100;
+  padding: 20px 7%;
+}
+
+nav img{
+height: 100 px;
+}
+
+nav ul {
+  list-style: none;
+ 
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero Section Styles */
+
+#hero {
+  /* background-image: url('IMG_5297.jpg'); */
+  background-size: cover;
+  background-position: center;
+  height: 650px;
+  display: block;;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+  margin-bottom: 90px;
+}
+
+.hero-content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+  padding: 40px;
+}
+
+.hero-content::before {
+  content: '';
+  /* background-color: rgba(224, 215, 208, 0.67); Black tint color with 50% opacity */
+  position: absolute;
+  top: -7px;
+  right: -10px;
+  bottom: -10px;
+  left: -100px;
+  z-index: -1; /* Set a lower z-index value to position it behind the text */
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.hero-content p {
+  font-size: 21px;
+  margin-bottom: 100px;
+  color: #ffffff;
+}
+
+.hero-content img {
+  width: 250px; /* Adjust the width as desired */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 90px;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: rgba(54, 97, 132, 0.928);
+  color: #ffffff;
+  padding: 20px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  position: absolute; /* Position the button absolutely */
+  bottom: 0px; /* Adjust the bottom value to position it as desired */
+  margin-bottom: 0px;
+  
+}
+
+.cta-button:hover {
+  background-color: rgb(147, 184, 213);
+}
+
+/* About Section Styles */
+#about {
+  color: #000;
+  padding: 20px;
+  background-color: rgba(35, 41, 48, 0.728);
+  line-height: 1.5;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  max-width: 80%;
+  margin: 70px auto;
+}
+
+.about-content {
+  
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+
+  
+}
+
+.about-content h2 {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  color: #ffffff;
+  font-size: 19px;
+  margin-bottom: 20px;
+}
+
+.header-title{
+  padding-bottom: 40px;
+  color: rgb(255, 255, 255);
+}
+
+
+/* Portfolio Section Styles */
+#portfolio {
+  background-color: rgb(147, 184, 213);
+  padding: 50px;
+}
+
+.portfolio-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.portfolio-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.project {
+  margin-bottom: 30px;
+}
+
+.project img {
+  max-width: 100%;
+}
+
+.project h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 16px;
+}
+
+/* Contact Section Styles */
+#contact {
+  padding: 50px;
+  /* background-color: #333; */
+  color: #fff;
+}
+
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contact-content form input,
+.contact-content form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.contact-content form button {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-content form button:hover {
+  background-color: #eee;
+}
+
+/* Footer Styles */
+footer {
+  background-color:transparent;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  }
+  
+  footer p {
+  color: #fff;
+  font-size: 14px;
+  margin: 0;
+  }
+
+  .footer-container {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer-link {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .footer-icon {
+    width:30px;
+    height: 30px;
+    padding-bottom: 4px;
+  }
+
+  .footer-img {
+    height: 40px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+  .hero-content h1 {
+  font-size: 28px;
+  }
+  
+  .hero-content p {
+  font-size: 16px;
+  }
+  
+  .about-content h2 {
+  font-size: 20px;
+  }
+  
+  .about-content p {
+  font-size: 14px;
+  }
+  
+  .portfolio-content h2 {
+  font-size: 20px;
+  }
+  
+  .project h3 {
+  font-size: 18px;
+  }
+  
+  .project p {
+  font-size: 14px;
+  }
+  
+  .contact-content h2 {
+  font-size: 20px;
+  }
+  
+  .contact-content p {
+  font-size: 14px;
+  }
+  
+  .contact-content form input,
+  .contact-content form textarea {
+  font-size: 14px;
+  }
+  
+  .contact-content form button {
+  padding: 8px 16px;
+  font-size: 14px;
+  }
+  }
+
+  #timeline {
+    background-color:#84b0d490;
+    /* background-color: rgba(146, 191, 242, 0.728); */
+    padding: 30px 0;
+    width: 70%;
+    margin: 10px auto;
+  }
+
+  .timeline{
+    display: flex;
+  }
+
+  .timeline-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .container {
+    padding-top: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 70px;
+    display: flex;
+  }
+  .timeline-itemnew {
+    position: relative;
+    margin-bottom: 70px;
+    display: flex;
+  }
+  
+  .timeline-item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 8px;
+    height: 100%;
+    width: 2px;
+    background-color: rgb(54, 97, 132);
+  }
+  
+  .timeline-year {
+    position: absolute;
+    top: 0;
+    left: 30;
+    transform: translate(-90%, -0%);
+    background-color: rgb(54, 97, 132);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  .timeline-yearnew {
+    position: absolute;
+    top: 0;
+    left: 20;
+    transform: translate(-90%, -0%);
+    background-color: rgb(54, 97, 132);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  .timeline-content {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    margin-left: 20px;
+    position: relative;
+    height: fit-content;
+    display: grid;
+  }
+
+   .timeline-contentnew {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    margin-left: 20px;
+    position: relative;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .timeline-content h3 {
+    font-size: 20px;
+    margin-bottom: 13px;
+  }
+
+  .timeline-contentnew h3 {
+    font-size: 20px;
+    margin-bottom: 13px;
+  }
+
+  .timeline-content h4 {
+    font-size: 17px;
+    margin-top: 16px;
+    
+  }
+  .timeline-contentnew h4 {
+    font-size: 17px;
+    margin-top: 16px;
+  }
+  
+  .timeline-content p {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+  .timeline-contentnew p {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+  .timeline-content img {
+    display: block;
+    margin-top: 20px;
+    max-width: 350px;
+    max-height: 400px;
+    height: auto;
+  }
+
+  .timeline-contentnew img {
+    display: block;
+    margin-top: 20px;
+    max-width: 350px;
+    max-height: 400px;
+    height: auto;
+  }
+  .additional-content {
+    margin-top: 20px;
+    /* display: grid;
+    display: grid;
+   grid-template-columns: 1fr 1fr; /* This will create two columns with equal width */
+  /* You can set specific widths for the columns like grid-template-columns: 200px 300px; 
+  gap: 10px;
+  justify-content: center;
+  align-items: center; */
+  }
+
+  .additional-contentnew {
+    flex: 1;
+  max-width: 50%;
+  padding: 10px;
+  }
+   
+  .additional-content h4 {
+    font-size: 17px;
+    margin-bottom:5px;
+    margin-top: 15px;
+    
+  }
+  
+  .additional-content img {
+    display: block;
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 400px;
+    justify-content: center;
+  align-items: center;
+  }
+
+  #projects {
+    text-align: center;
+    padding: 20px;
+    background-color:#171d248c;
+    color: #fff;
+    width: 70%;
+    margin: 10px auto;
+  }
+  .container1 {
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden; /* Add this line to hide overflowing content */
+    position: relative;
+  }
+  .carousel {
+    width: 100%;
+    /* border: 2px solid #ccc; */
+    height: 500px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    
+  }
+  
+  .slider {
+    height: 100%;
+    display: flex;
+    width: 300%;
+    transition: all 0.5s;
+    flex-shrink: 0;
+    position: absolute;
+    flex: 1;
+  }
+  .slider section {
+    flex-basis: 33.3%;
+    flex-shrink: 0;
+    flex: 1;
+    width: 33.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 80%;
+    cursor: pointer;
+    color: #fff;
+    display: block;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  .arrow.prev {
+    left: 10px;
+  }
+  .arrow.next {
+    right: 10px;
+  }
+
+  /* Add this CSS to your existing styles.css or create a new CSS file and link it in the HTML */
+
+/* Project Section Styles */
+section {
+  padding: 10px;
+  margin-top: 10px;
+   /* Change the background color as needed */
+}
+
+.project-content {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 24px;
+  font-size: 23px;
+}
+
+.project-content-total {
+ display: grid;
+  grid-template-columns: 1fr 1fr; /* This will create two columns with equal width */
+  /* You can set specific widths for the columns like grid-template-columns: 200px 300px; */
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+
+.project-content img {
+  max-width: 400px;
+  max-height: 400px;
+  height: auto;
+}
+.project-content h2 {
+  font-size: 24px;
+ 
+}
+.project-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.project-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+span {
+  font-size: 74px; /* Adjust the size as needed */
+  font-weight:bold;
+}
+
+.experience-description {
+  padding: 20px;
+  background-color:#fffffff6;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.experience-description h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.experience-description p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
