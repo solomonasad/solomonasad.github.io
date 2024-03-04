@@ -561,7 +561,7 @@ footer {
   .slider section {
     flex-basis:calc(100% / 4);
     flex-shrink: 0;
-    flex: 1;
+
     width: calc(100% / 4);
     display: flex;
     justify-content: center;
